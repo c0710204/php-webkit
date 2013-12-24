@@ -37,7 +37,7 @@
             // 
             this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.notifyIcon1.BalloonTipText = "运行于127.0.0.1:50000";
-            this.notifyIcon1.BalloonTipTitle = "Online";
+            this.notifyIcon1.BalloonTipTitle = "php代理";
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "starbound MODDER";
             this.notifyIcon1.Visible = true;
