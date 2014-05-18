@@ -25,16 +25,16 @@ namespace phpservices
         {
             // TODO:  在此处添加代码以启动服务。
             phphost = new Process();
-            this.port = port;
-            this.notifyIcon1.BalloonTipText = "运行于127.0.0.1:" + port.ToString();
-            this.notifyIcon1.ShowBalloonTip(30);
-            phphost.StartInfo.WorkingDirectory = "www";
+            phphost.StartInfo.WorkingDirectory = System.Environment.CurrentDirectory+"\\www";
             phphost.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-            phphost.StartInfo.FileName = "php-mobile.exe";
+            phphost.StartInfo.FileName = System.Environment.CurrentDirectory + "\\php-mobile.exe";
             phphost.StartInfo.Arguments = " -S 127.0.0.1:" + port.ToString();
             phphost.StartInfo.CreateNoWindow = false;
             phphost.StartInfo.UseShellExecute = true;
             phphost.Start();
+            this.port = port;
+            this.notifyIcon1.BalloonTipText = "运行于127.0.0.1:" + port.ToString();
+            this.notifyIcon1.ShowBalloonTip(30);
         }
 
         public void Stop()
